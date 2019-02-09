@@ -5,7 +5,7 @@ import { When } from "../if";
 
 import * as actions from "./actions.js";
 
-const API = process.env.API;
+const API = `https://javascript-401-api.herokuapp.com/api/v1`;
 
 // Auto-Hide some of the mongo specific fields
 const uiSchema = {
@@ -59,9 +59,9 @@ class Record extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  record: state.api.record,
-  schemas: state.api.schemas,
-  model: state.api.model
+  record: state.records.record,
+  schemas: state.records.schemas,
+  model: state.records.model
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
@@ -71,4 +71,6 @@ const mapDispatchToProps = (dispatch, getState) => ({
   put: (model, url, record) => dispatch(actions.put(model, url, record))
 });
 
-export default connect(mapStateToProps)(Record);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(Record);

@@ -26,7 +26,7 @@ export default (state = initialState, action) => {
       return { ...state, records: payload };
 
     case "CLEAR":
-      return state;
+      return {...state, record: []};
 
     case "RECORD":
       return { ...state, record: payload };

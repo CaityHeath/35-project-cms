@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-const API = process.env.API;
+const API = `https://javascript-401-api.herokuapp.com/api/v1`;
 
 class Records extends React.Component {
   getRecord = id => {
@@ -55,8 +55,8 @@ class Records extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  records: state.api.records,
-  model: state.api.model
+  records: state.records.records,
+  model: state.records.model
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({

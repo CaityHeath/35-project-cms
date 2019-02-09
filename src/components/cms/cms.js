@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Record from './record.js';
 import Models from './models.js';
 import Records from './records.js';
+import Record from './record.js';
 
 export default class CMS extends React.Component {
   render() {

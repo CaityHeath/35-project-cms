@@ -33,7 +33,7 @@ const runGetModels = payload => {
   };
 };
 
-export const getRecords = url => {
+export const getRecords = url => dispatch => {
   superagent.get(url).then(data => {
     dispatch(runGetRecords(data.body.results));
   });
