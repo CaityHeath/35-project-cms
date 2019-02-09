@@ -12,24 +12,28 @@ const styles = {
   }
 };
 
-const API = process.env.API;
+const API = `https://javascript-401-api.herokuapp.com/api/v1`;
 
 class Models extends React.Component {
   componentDidMount() {
+    console.log('inside componenet did mount');
     let url = `${API}/models`;
+    console.log(url);
     this.props.getModels(url);
   }
 
   selectModel = model => {
     let url = `${API}/${model}`;
+    console.log(model);
     this.props.clearRecord();
-    this.props.setModel();
+    this.props.setModel(model);
     this.props.getRecords(url);
   };
 
   render() {
     return (
       <ul>
+        <h1>hello from models</h1>
         {this.props.models &&
           this.props.models.map((model, i) => (
             <li
@@ -47,7 +51,7 @@ class Models extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  models: state.api.models
+  models: state.records.models
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
