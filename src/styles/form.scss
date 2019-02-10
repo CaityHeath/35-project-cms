@@ -1,0 +1,52 @@
+@import "./_variables.scss";
+
+section:nth-of-type(2){
+width: 50%;
+margin-left: 40%;
+}
+form{
+  font-family:'Open Sans', sans-serif;
+}
+
+button{
+position: relative;
+top: 30px;
+left: 400px;
+}
+
+form.rjsf{
+  width: 60%;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+legend#root__title{
+  position: relative;
+  right: 30px;
+  font-weight: bold;
+}
+
+label.control-label{
+  position: relative;
+  left:5px;
+}
+
+div.form-group.field.field-string{
+  margin: 5px;
+}
+
+input.form-control{
+  margin-top: 5px;
+  width: 200px;
+}
+
+input#root_price.form-control{
+margin-top: 5px;
+margin-left: 5px;
+}
+
+button.btn.btn-info{
+  position:relative;
+  left: 50px;
+  color: red;
+}

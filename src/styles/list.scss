@@ -1,0 +1,16 @@
+@import "./_variables.scss";
+
+
+section ul{
+  padding: 1em;
+  margin-top: 4em;
+  background: $bleed;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section ul li{
+ cursor: pointer;
+  text-align: center;
+  margin: 1em;
+}
+
