@@ -1,0 +1,23 @@
+@import './_variables.scss';
+
+
+header {
+font-family:'Open Sans', sans-serif;
+text-align: center;
+height: 20%;
+}
+
+nav{
+  margin-top: 2em;
+}
+
+header nav ul li{
+cursor: pointer;
+display: inline;
+margin: 3em;
+}
+
+
+
+
+

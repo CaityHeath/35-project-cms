@@ -33,7 +33,6 @@ class Models extends React.Component {
   render() {
     return (
       <ul>
-        <h1>hello from models</h1>
         {this.props.models &&
           this.props.models.map((model, i) => (
             <li
