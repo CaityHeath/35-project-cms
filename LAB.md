@@ -2,7 +2,7 @@
 =================================================
 
 ## Overview
-At the core of every web site is content. Given that, the most basic need in the online world is a way to **manage** that content. Typically separate from the presentation (the actual website), most websites have a back-end or administrative interface that allows for the creation, curation, and management of the content that ultimately gets rendered to the user.
+At the core of every web site is content. Given that, the most basic need in the online world is a way to **manage** that content. Typically separate from the presentation (the actual website), most websites have a back-end or administrative interface allowing for the creation, curation, and management of the content that gets rendered.
 
 In this project, you will be tasked with implementing a "CMS" or Content Management System, which will allow users to:
 
