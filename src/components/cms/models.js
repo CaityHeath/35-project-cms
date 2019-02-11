@@ -15,6 +15,13 @@ const styles = {
 const API = `https://javascript-401-api.herokuapp.com/api/v1`;
 
 class Models extends React.Component {
+  
+  
+  /**
+   * Sends a request for getModels action to be dispatched 
+   *
+   * @memberof Models
+   */
   componentDidMount() {
     console.log('inside componenet did mount');
     let url = `${API}/models`;
@@ -22,6 +29,12 @@ class Models extends React.Component {
     this.props.getModels(url);
   }
 
+  
+  /**
+   *Sends a request for clearRecord, setModel and getRecords to be dispatched. 
+   *
+   * @param {*} model
+   */
   selectModel = model => {
     let url = `${API}/${model}`;
     console.log(model);
@@ -49,10 +62,21 @@ class Models extends React.Component {
   }
 }
 
+/**
+ *Sets state
+ *
+ * @param {*} state
+ */
 const mapStateToProps = state => ({
   models: state.records.models
 });
 
+/**
+ *Sets the requests to be sent to the dipatcher. 
+ *
+ * @param {*} dispatch
+ * @param {*} getState
+ */
 const mapDispatchToProps = (dispatch, getState) => ({
   setModel: model => dispatch(actions.setModel(model)),
   getModels: url => dispatch(actions.getModels(url)),

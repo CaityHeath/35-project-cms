@@ -7,12 +7,23 @@ export const setModel = model => {
   };
 };
 
-export const getSchema = (model, url) => dispatch => {
+export const /**
+ *Runs a call to superagent with the url and dispatches response body to SCHEMA action. 
+ *
+ * @param {*} dispatch
+ */
+getSchema = (model, url) => dispatch => {
   superagent.get(url).then(data => {
     dispatch(runGetSchema({ model: model, schema: data.body }));
   });
 };
 
+/**
+ *Runs the SCHEMA action and sends payload to the reducer.
+ *
+ * @param {*} payload
+ * @returns
+ */
 const runGetSchema = payload => {
   return {
     type: "SCHEMA",
@@ -20,12 +31,23 @@ const runGetSchema = payload => {
   };
 };
 
-export const getModels = url => dispatch => {
+export const /**
+ *Runs a call to superagent with the url and dispatches response body to MODELS action. 
+ *
+ * @param {*} dispatch
+ */
+getModels = url => dispatch => {
   superagent.get(url).then(data => {
     dispatch(runGetModels(data.body));
   });
 };
 
+/**
+ *Runs the MODELS action and sends payload to the reducer.
+ *
+ * @param {*} payload
+ * @returns
+ */
 const runGetModels = payload => {
   return {
     type: "MODELS",
@@ -33,12 +55,23 @@ const runGetModels = payload => {
   };
 };
 
-export const getRecords = url => dispatch => {
+export const /**
+ *
+ *Runs a call to superagent with the url and dispatches response body to RECORDS action. 
+ * @param {*} data
+ */
+getRecords = url => dispatch => {
   superagent.get(url).then(data => {
     dispatch(runGetRecords(data.body.results));
   });
 };
 
+/**
+ *Runs the RECORDS action and sends payload to the reducer.
+ *
+ * @param {*} payload
+ * @returns
+ */
 const runGetRecords = payload => {
   return {
     type: "RECORDS",
@@ -46,12 +79,23 @@ const runGetRecords = payload => {
   };
 };
 
-export const getRecord = url => dispatch => {
+export const /**
+ * Runs a call to superagent with the url and dispatches response body to RECORD action. 
+ *
+ * @param {*} dispatch
+ */
+getRecord = url => dispatch => {
   superagent.get(url).then(data => {
     dispatch(runGetRecord(data.body));
   });
 };
 
+/**
+ *Runs the RECORD action and sends payload to the reducer.
+ *
+ * @param {*} payload
+ * @returns
+ */
 const runGetRecord = payload => {
   return {
     type: "RECORD",
