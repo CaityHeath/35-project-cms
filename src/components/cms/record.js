@@ -5,7 +5,7 @@ import { When } from "../if";
 
 import * as actions from "./actions.js";
 
-const API = process.env.REACT_APP_API;
+const API = `https://javascript-401-api.herokuapp.com/api/v1`;
 
 // Auto-Hide some of the mongo specific fields
 const uiSchema = {
